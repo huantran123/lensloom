@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* :root {
+  --color-gray-100: #FFFFFF;
+  --color-gray-200: #EBF0F1;
+  --color-gray-300: #CFD5D8;
+  --color-gray-400: #B3B7B8;
+  --color-gray-500: #6A6D6E;
+  --color-gray-600: #323334;
+  --color-gray-700: #111212;
+
+  --color-yellow-100: #FFFAEC;
+  --color-yellow-200: #FFF1CD;
+  --color-yellow-300: #FFE4A1;
+  --color-yellow-400: #F7D170;
+  --color-yellow-500: #EDAB00;
+  --color-yellow-600: #BB8F1F;
+  --color-yellow-700: #8A6E28;
+
+  --color-blue-100: #F8FAFC;
+  --color-blue-200: #D5EAFB;
+  --color-blue-300: #ABDFFD;
+  --color-blue-400: #74BCFF;
+  --color-blue-500: #438DFB;
+  --color-blue-600: #0F62DE;
+  --color-blue-700: #0A469E;
+
+  --color-red: #DA2A2A;
+  --color-green: #5CB147;
+  --color-orange: #F68C3F;
+  --color-purple: #8D65FF;
+} */
+
+.main {
+  width: 100vw;
+  min-height: 100vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  padding: 120px 24px 160px 24px;
+  pointer-events: none;
+  background-color: #F8FAFC;
+}
+
+@media screen and (max-width: 640px) {
+  .main {
+    padding: 0;
+  }
+}
+
+/* Tailwind Styles */
+
+.app {
+  @apply font-urbanist relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto sm:px-8 px-4;
+}
+
+.primary_btn {
+  @apply rounded-full border-none bg-yellow-500 py-1.5 px-5 text-white transition-all hover:bg-yellow-600 text-center text-sm font-urbanist flex items-center justify-center no-underline;
+}
+
+.search_input {
+  @apply block w-full rounded-md border border-gray-200 bg-white py-2.5 font-urbanist pl-5 pr-12 text-sm font-medium focus:border-black focus:outline-none focus:ring-0;
+}
+
+.nav_link {
+  @apply no-underline text-gray-500 hover:text-yellow-500
+}
+
+.active_nav_link {
+  @apply underline decoration-yellow-500 decoration-4 underline-offset-8
+}

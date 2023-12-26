@@ -18,6 +18,7 @@
 // }
 
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -27,11 +28,45 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        satoshi: ['Satoshi', 'sans-serif'],
-        inter: ['Inter', 'sans-serif'],
+        'urbanist': ['Urbanist', 'sans-serif'],
+        'satoshi': ['Satoshi', 'sans-serif'],
       },
       colors: {
-        'primary-orange': '#FF5722',
+        'gray': {
+          100: '#FFFFFF',
+          200: '#EBF0F1',
+          300: '#CFD5D8',
+          400: '#B3B7B8',
+          500: '#6A6D6E',
+          600: '#323334',
+          700: '#111212',
+        },
+        'yellow': {
+          100: '#FFFAEC',
+          200: '#FFF1CD',
+          300: '#FFE4A1',
+          400: '#F7D170',
+          500: '#EDAB00',
+          600: '#CD9301',
+          700: '#8A6E28',
+        },
+        'blue': {
+          100: '#F8FAFC',
+          200: '#D5EAFB',
+          300: '#ABDFFD',
+          400: '#74BCFF',
+          500: '#438DFB',
+          600: '#0F62DE',
+          700: '#0A469E',
+        },
+        'red': '#DA2A2A',
+        'green': '#5CB147',
+        'orange': '#F68C3F',
+        'purple': '#8D65FF',
+        'primary': '#EDAB00',
+      },
+      backgroundColor: {
+        'base': '#F8FAFC',
       }
     },
   },
