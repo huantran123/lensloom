@@ -6,13 +6,13 @@ import Provider from '@components/Provider'
 
 export const metadata = {
   title: 'LensLoom',
-  description: 'Discover and Share Photos'
+  description: 'Discover and Share Images'
 }
 
 const RootLayout = ({ children }) => {
   return (
     <html lang="en">
-      <body>
+      <body suppressHydrationWarning={true}>
         <Provider>
           <div className="main">
           </div>

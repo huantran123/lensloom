@@ -15,7 +15,7 @@ const PostSchema = new Schema({
   },
   image: {
     type: String,
-    required: [true, 'Please upload your photo']
+    required: [true, 'Please upload your image']
   },
 }, { timestamps: true })  // auto generate createdAt and updatedAt field
 

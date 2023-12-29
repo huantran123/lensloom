@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { useRouter } from "next/navigation";
 import Image from 'next/image'
 import Link from 'next/link'
 import cls from 'classnames'
@@ -8,7 +9,10 @@ import {
 } from "reactstrap"
 import { User, Bookmark, LogOut } from 'react-feather'
 
-const UserPhotoDropdown = ({ className, userImage, signOut, photoSize }) => {
+const UserDropdown = ({ className, userImage, signOut, imageSize }) => {
+  // router
+  const router = useRouter()
+
   // state
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
@@ -21,8 +25,8 @@ const UserPhotoDropdown = ({ className, userImage, signOut, photoSize }) => {
         <DropdownToggle className="relative bg-transparent !border-transparent p-0" >
           <Image
             src={userImage}
-            width={photoSize}
-            height={photoSize}
+            width={imageSize}
+            height={imageSize}
             className="rounded-full block"
             alt="profile"
           />
@@ -51,6 +55,7 @@ const UserPhotoDropdown = ({ className, userImage, signOut, photoSize }) => {
             onClick={() => {
               setDropdownOpen(false)
               signOut()
+              router.push('/')
             }}
           >
             <LogOut className="inline" width={20} height={20} />
@@ -62,4 +67,4 @@ const UserPhotoDropdown = ({ className, userImage, signOut, photoSize }) => {
   )
 }
 
-export default UserPhotoDropdown
+export default UserDropdown

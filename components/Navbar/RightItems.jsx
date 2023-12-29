@@ -6,7 +6,7 @@ import {signIn, signOut, useSession, getProviders} from 'next-auth/react'
 import cls from 'classnames'
 import { Plus } from 'react-feather'
 // components
-import UserPhotoDropdown from './UserPhotoDropdown'
+import UserDropdown from './UserDropdown'
 
 const RightItems = ({ className }) => {
   // states
@@ -53,8 +53,8 @@ const RightItems = ({ className }) => {
               Create post <Plus width={20} height={20} className="text-gray-100 ml-[0.5rem] hidden md:block" />
             </Link>
 
-            {/* user photo */}
-            <UserPhotoDropdown className="ml-[0.5rem] md:ml-[1.5rem]" photoSize={40} userImage={session?.user.image} signOut={signOut} />
+            {/* user dropdown */}
+            <UserDropdown className="ml-[0.5rem] md:ml-[1.5rem]" imageSize={40} userImage={session?.user.image} signOut={signOut} />
           </div>
 
           {/* Mobile navigation */}
@@ -64,8 +64,8 @@ const RightItems = ({ className }) => {
               <Plus width={32} height={32} className="text-yellow-500"/>
             </Link>
 
-            {/* user photo */}
-            <UserPhotoDropdown className="ml-[0.5rem]" photoSize={32} userImage={session?.user.image} signOut={signOut} />
+            {/* user dropdown */}
+            <UserDropdown className="ml-[0.5rem]" imageSize={32} userImage={session?.user.image} signOut={signOut} />
           </div>
         </>
       )}
